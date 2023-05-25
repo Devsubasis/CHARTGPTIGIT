@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Login - SB Admin</title>
+        <link href="/css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="" style="background-color: #dee2e6;">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-xl-4 col-md-5 col-sm-6 mb-4">
+                                <div class="card border-0 rounded-lg mt-5 rounded-0">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                                    <div class="card-body">
+                                        <form action="/user/login" method="post">
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control rounded-0" name="username" id="inputEmail" type="email" placeholder="Enter email" />
+                                                <label for="inputEmail">Email address</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control rounded-0" name="password" id="inputPassword" type="password" placeholder="Enter Password" />
+                                                <label for="inputPassword">Password</label>
+                                            </div>
+                                            <span class="validation text-center">
+                                                <% if (messages.error) { %>
+                                                  <p style="color:red; font-size: 13px;"><%- messages.error %></p>
+                                                <% } %>
+                                            </span>
+                                            <div class="mt-4 mb-0">
+                                                <button class="btn btn-md rounded-0 btn-primary float-lg-end" type="submit">Login</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center py-3">
+                                        <div class="small"><a href="/user/register">Need an account? Sign up!</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/jquery.min.js"></script> 
+        <script src="/js/scripts.js"></script>
+        <script>
+            $(document).ready(function(){
+                setTimeout(function(){
+                    $(".validation").fadeOut(1000)
+                },3000)
+            });
+        </script>
+    </body>
+</html>
